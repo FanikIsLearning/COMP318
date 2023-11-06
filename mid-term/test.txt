@@ -1,0 +1,41 @@
+Task3: Scikit-image, matplotlib (2 points each unless otherwise stated)
+
+. Check and (take screenshot) if scikit -image and matplotlib is installed.
+
+. Load the data for coffee in a variable named coffee_<firstname_lastname>...1
+
+. Print the above data in textual format..1
+
+. Print the data type and the data shape for the above data.
+
+. Display the above data as an image using matplotlib; save the image as Figure1_<firstname_lastname>
+
+. Import filters and use it to filter the above image using the Gaussian filter with std 5 (to blur it); save the image as filtered_Figure_<firstname_lastname> 
+
+
+Task 1
+NumPy (2 points each otherwise stated).Give the outputs at each step
+
+1. Generate a NumPy array with 50 elements (array a_<firstname_lastname>)
+
+2. Display Median, mean and std dev for array a_<firstname_lastname>
+
+3. Reshape it 5x10 (array b_<firstname_lastname>) and 10x5 (array c_<firstname_lastname>)
+
+4. Display element [3,7] from array b_<firstname_lastname> 
+
+5. Give the sum of the row 8 from array c_<firstname_lastname> 
+
+6. Print the elements of the last row for the array b_<firstname_lastname> and 5th column for the array c_<firstname_lastname>
+
+Task2: Scikit-Learn
+
+1. Check and (take screenshot) if scikit -learn installed
+
+2. Display all the datasets that come with sklearn.
+
+3. Load and display the data load_breast_cancer() in a variable named Breast_Cancer_<firstname_lastname>    
+
+4. Describe the data and display feature_names and target_names. 
+
+5. Read the data breast_cancer.csv int a variable using Pandas and describe the data

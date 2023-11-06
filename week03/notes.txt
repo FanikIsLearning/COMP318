@@ -1,0 +1,46 @@
+Python 3.9.5 (default, May 18 2021, 12:31:01) 
+[Clang 10.0.0 ] on darwin
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> import numpy as np
+>>> check = np.zeros((8, 8))
+>>> check
+array([[0., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0., 0., 0.]])
+>>> check[::2, 1::2] = 1
+>>> check
+array([[0., 1., 0., 1., 0., 1., 0., 1.],
+       [0., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 1., 0., 1., 0., 1., 0., 1.],
+       [0., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 1., 0., 1., 0., 1., 0., 1.],
+       [0., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 1., 0., 1., 0., 1., 0., 1.],
+       [0., 0., 0., 0., 0., 0., 0., 0.]])
+>>> check[1::2, ::2] = 1
+>>> check
+array([[0., 1., 0., 1., 0., 1., 0., 1.],
+       [1., 0., 1., 0., 1., 0., 1., 0.],
+       [0., 1., 0., 1., 0., 1., 0., 1.],
+       [1., 0., 1., 0., 1., 0., 1., 0.],
+       [0., 1., 0., 1., 0., 1., 0., 1.],
+       [1., 0., 1., 0., 1., 0., 1., 0.],
+       [0., 1., 0., 1., 0., 1., 0., 1.],
+       [1., 0., 1., 0., 1., 0., 1., 0.]])
+>>> import matplotlib.pyplot as plt
+>>> plt.imshow(check, cmap='gray', interpolation='nearest')
+<matplotlib.image.AxesImage object at 0x7fb552842280>
+>>> plt.show()
+
+>>> from sklearn import datasets
+>>> datasets
+<module 'sklearn.datasets' from '/Users/fanik/opt/anaconda3/envs/comp318/lib/python3.9/site-packages/sklearn/datasets/__init__.py'>
+>>> 
+
+
+pip install --trusted-host pypi.org --trusted host pypi.python.org --trusted-host files.pythonhosted.org numpy
