@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentFirstBinding
 
+
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
@@ -20,15 +21,12 @@ class FirstFragment : Fragment() {
     private val binding get() = _binding!!
 
     private fun countMe() {
-        // Get the value of the text view.
-        val countString = binding.textviewFirst.text.toString()
-
-        // Convert value to a number and increment it
-        var count = countString.toIntOrNull() ?: 0
-        count++
-
-        // Display the new value in the text view.
-        binding.textviewFirst.text = count.toString()
+        // Get the current count or default to 0 if null or not a number
+        val currentCount = binding.textviewFirst.text.toString().toIntOrNull() ?: 0
+        // Increment the count
+        val newCount = currentCount + 1
+        // Set the new count to textview_first
+        binding.textviewFirst.text = newCount.toString()
     }
 
     override fun onCreateView(
@@ -43,7 +41,11 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.randomButton.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+            // Using binding to get the current text from textview_first
+            val currentCount = binding.textviewFirst.text.toString().toIntOrNull() ?: 0
+            // Creating an action with the current count to navigate to SecondFragment
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(currentCount)
+            findNavController().navigate(action)
         }
 
         binding.toastButton.setOnClickListener {
